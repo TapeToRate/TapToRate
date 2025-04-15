@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/lottie-web@5.9.6/build/player/lottie.min.js"></script>
     <title>Feedback Restaurant</title>
     <style>
       body {
@@ -86,6 +87,14 @@
           font-size: 2.5em;
         }
       }
+      #assistant-lottie {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 400px;
+        height: 400px;
+        z-index: 100;
+      }
     </style>
   </head>
   <body>
@@ -104,5 +113,16 @@
         >
       </div>
     </div>
+    <div id="assistant-lottie"></div>
+    <script>
+      const container = document.getElementById("assistant-lottie");
+      lottie.loadAnimation({
+        container: container,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "images/Ek0iof1tej.json", // <-- URL de l’animation
+      });
+    </script>
   </body>
 </html>
